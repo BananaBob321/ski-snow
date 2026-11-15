@@ -1,3 +1,3 @@
 481 of 481 resorts done; stopped: complete
-2026-11-15T04:44:34.726Z
-last: ok 425
+2026-11-15T14:50:29.187Z
+last: 

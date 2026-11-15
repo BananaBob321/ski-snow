@@ -1,0 +1,3 @@
+0 of 481 resorts done; stopped: daily limit
+2026-11-15T15:06:25.533Z
+last: 429 {"error":true,"reason":"Daily API request limit exceeded. Please try again tomorrow."} @361
