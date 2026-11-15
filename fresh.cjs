@@ -16,11 +16,9 @@ const STATE = 'fresh_state.json', OUT = 'snow_fresh.csv', TOTAL = GEO2.length;
 const st = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : { done: {}, fail: {} };
 const save = () => fs.writeFileSync(STATE, JSON.stringify(st));
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-// Variable sets tried in order; the first that the API accepts is remembered in the state file.
-const VARSETS = [
-  ['snowfall_sum', 'rain_sum', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'sunshine_duration'],
-  ['snowfall_sum', 'rain_sum', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean'],
-  ['snowfall_sum', 'rain_sum', 'temperature_2m_mean']];
+// Daily variable sets tried in order (the first the API accepts is remembered). Temperature comes hourly,
+// because the model's daily max/min are often empty; daily max and min are worked out from the hours.
+const VARSETS = [['snowfall_sum', 'rain_sum', 'sunshine_duration'], ['snowfall_sum', 'rain_sum']];
 const LEAD = 14; // days fetched before the window so "days since snow" starts from real history
 let LASTMSG = '';
 
@@ -40,19 +38,23 @@ async function one(i) {
   for (const y of years) {
     const ws = new Date(Date.UTC(y, sh ? 6 : 11, 10)), we = new Date(Date.UTC(sh ? y : y + 1, sh ? 7 : 0, 30));
     const fs0 = new Date(ws.getTime() - LEAD * 86400000);
-    const url = vs => `https://archive-api.open-meteo.com/v1/archive?latitude=${lat}&longitude=${lon}&elevation=${mid}&start_date=${iso(fs0)}&end_date=${iso(we)}&daily=${vs.join(',')}&timezone=auto&models=ecmwf_ifs`;
+    const url = vs => `https://archive-api.open-meteo.com/v1/archive?latitude=${lat}&longitude=${lon}&elevation=${mid}&start_date=${iso(fs0)}&end_date=${iso(we)}&daily=${vs.join(',')}&hourly=temperature_2m&timezone=auto&models=ecmwf_ifs`;
     let j;
     if (st.vs != null) j = await get(url(VARSETS[st.vs]));
     else {
       for (let v = 0; v < VARSETS.length; v++) {
-        try { j = await get(url(VARSETS[v])); st.vs = v; st.vsNote = 'using variable set ' + v; save(); break; }
-        catch (err) { const m = String(err.message || err); if (/429|[Dd]aily/.test(m)) throw err; (st.err = st.err || {})['vars' + v] = m.slice(0, 200); save(); }
+        try { j = await get(url(VARSETS[v])); st.vs = v; st.vsNote = 'using daily set ' + v; save(); break; }
+        catch (err) { const m = String(err.message || err); if (/429|[Dd]aily|fetch failed/.test(m)) throw err; (st.err = st.err || {})['vars' + v] = m.slice(0, 200); save(); }
       }
       if (!j) throw new Error('no variable set accepted');
     }
     const d = j.daily, n = d.time.length;
+    const tx = {}, tn = {};
+    j.hourly.time.forEach((t, k) => { const v = j.hourly.temperature_2m[k]; if (v == null) return; const day = t.slice(0, 10);
+      tx[day] = tx[day] == null ? v : Math.max(tx[day], v); tn[day] = tn[day] == null ? v : Math.min(tn[day], v); });
+    d.temperature_2m_max = d.time.map(t => tx[t] == null ? null : tx[t]);
+    d.temperature_2m_min = d.time.map(t => tn[t] == null ? null : tn[t]);
     const bad = a => !a || a.some(v => v == null);
-    if (bad(d.temperature_2m_max) && !bad(d.temperature_2m_mean)) { d.temperature_2m_max = d.temperature_2m_mean; d.temperature_2m_min = d.temperature_2m_mean; st.meanOnly = (st.meanOnly || 0) + 1; }
     if (bad(d.snowfall_sum) || bad(d.temperature_2m_max)) { nullSeasons++; continue; }
     let since = LEAD; const S = { thaw: 0, ft: 0, sun: 0, sunN: 0, rain: 0, stale: 0, snow: 0, days: 0 };
     for (let k = 0; k < n; k++) {
@@ -93,14 +95,15 @@ function write(state) {
   if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `done=${done}\n`);
 }
 async function run() {
-  let streak = 0;
+  let streak = 0, net = 0;
   for (let i = 0; i < TOTAL; i++) {
     if (st.done[i] || (st.fail[i] || 0) >= 2) continue;
-    try { st.done[i] = await one(i); save(); LASTMSG = 'ok ' + i; streak = 0; }
+    try { st.done[i] = await one(i); save(); LASTMSG = 'ok ' + i; streak = 0; net = 0; }
     catch (err) {
       LASTMSG = String(err.message || err) + ' @' + i;
       if (/[Dd]aily/.test(LASTMSG)) return 'daily limit';
       if (/429/.test(LASTMSG)) { await sleep(70000); i--; continue; }
+      if (/fetch failed|ECONNRESET|ETIMEDOUT|socket/i.test(LASTMSG) && (net = (net || 0) + 1) <= 6) { await sleep(30000); i--; continue; }
       st.fail[i] = (st.fail[i] || 0) + 1; (st.err = st.err || {})[i] = LASTMSG.slice(0, 200); save();
       if (++streak >= 5) return 'stopped after 5 errors in a row (saving the daily allowance): ' + LASTMSG.slice(0, 150);
     }
