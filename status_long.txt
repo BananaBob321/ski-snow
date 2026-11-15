@@ -1,3 +1,3 @@
-144 of 481 resorts done (daily averages kept for 0); stopped: daily limit
-2026-11-15T15:06:26.037Z
-last: 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true} @144
+216 of 481 resorts done (daily averages kept for 73); stopped: daily limit
+2026-11-15T16:33:41.389Z
+last: 429 {"reason":"Daily API request limit exceeded. Please try again tomorrow.","error":true} @229
