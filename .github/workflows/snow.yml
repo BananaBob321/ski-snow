@@ -1,8 +1,9 @@
 name: Snow data
 
 # Once a day, just after Open-Meteo's free daily allowance resets (00:00 UTC), download as many
-# resorts as the allowance allows, then commit the results. Turns itself off when both sets are done.
+# resorts as the allowance allows, then commit the results. Turns itself off when all three sets are done.
 #   run.cjs  -> snow_raw.csv  (ECMWF IFS 9 km, 2017 onwards, mid-mountain)
+#   fresh.cjs -> snow_fresh.csv (IFS 9 km, mid-mountain: thaw, freeze-thaw, sunny and rain days, days since snow)
 #   long.cjs -> snow_long.csv (ERA5, 1991 onwards, timing; IFS at the base for rain and temperature)
 on:
   schedule:
@@ -30,6 +31,11 @@ jobs:
         run: node run.cjs
         env:
           MINUTES: "100"
+      - id: fresh
+        if: always()
+        run: node fresh.cjs
+        env:
+          MINUTES: "120"
       - id: long
         if: always()
         run: node long.cjs
@@ -40,11 +46,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A state.json snow_raw.csv status.txt long_state.json snow_long.csv status_long.txt 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "Snow data: $(head -1 status.txt) | long record: $(head -1 status_long.txt 2>/dev/null)"
+          git add -A state.json snow_raw.csv status.txt fresh_state.json snow_fresh.csv status_fresh.txt long_state.json snow_long.csv status_long.txt 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Snow data: $(head -1 status.txt) | fresh: $(head -1 status_fresh.txt 2>/dev/null) | long record: $(head -1 status_long.txt 2>/dev/null)"
           git push
       - name: Turn off when finished
-        if: steps.snow.outputs.done == 'true' && steps.long.outputs.done == 'true'
+        if: steps.snow.outputs.done == 'true' && steps.fresh.outputs.done == 'true' && steps.long.outputs.done == 'true'
         run: gh workflow disable snow.yml
         env:
           GH_TOKEN: ${{ github.token }}
