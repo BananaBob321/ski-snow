@@ -1,0 +1,3 @@
+211 of 481 resorts done; stopped: daily limit
+2026-11-15T03:33:46.553Z
+last: 429 Daily API request limit exceeded @75
