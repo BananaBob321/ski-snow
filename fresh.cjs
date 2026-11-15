@@ -82,7 +82,7 @@ async function one(i) {
 }
 
 const HEADER = ['#', 'Seasons used', 'Mid-mountain elevation (m)', 'Thaw days in window (of 52)', 'Freeze-thaw days in window (of 52)',
-  'Sunny days in window (6 h+ sun, of 52)', 'Rain days at mid-mountain in window (of 52)', 'Average days since last snowfall',
+  'Sunny days in window (6 h+ sun; of 52)', 'Rain days at mid-mountain in window (of 52)', 'Average days since last snowfall',
   'Snow days per week at mid-mountain (model)'];
 function write(state) {
   const ids = Object.keys(st.done).map(Number).sort((a, b) => a - b);
