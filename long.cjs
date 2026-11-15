@@ -40,12 +40,27 @@ function bySeason(d, sh, vars) {
 const avg = a => a.reduce((x, y) => x + y, 0) / a.length;
 const roll = (arr, w) => { let best = -1, bi = 0, c = 0; for (let d = 0; d < arr.length; d++) { c += arr[d]; if (d >= w) c -= arr[d - w]; if (d >= w - 1 && c > best) { best = c; bi = d - w + 1; } } return [best, bi]; };
 
+// ERA5 seasons for resort i; also keeps the daily climatology (mean snowfall per calendar day, cm)
+// in st.clim so other measures (e.g. best week within the main season, monthly profile) can be
+// recalculated later without downloading again.
+async function era5(i) {
+  const [lat, lon, base, top, shf] = GEO2[i]; const sh = shf === 1, mid = Math.round((base + top) / 2);
+  const years = []; for (let y = FIRST; y <= LAST; y++) years.push(y);
+  const e = bySeason(await seasons(lat, lon, mid, sh, 'era5', years, ['snowfall_sum']), sh, ['snowfall_sum']);
+  if (e.length >= 20) {
+    const md = e[0][1].map(x => x[0]);
+    st.clim = st.clim || {};
+    st.clim[i] = { start: md[0], n: e.length, cm: md.map((_, d) => Math.round(10 * avg(e.map(([y, a]) => a[d][1]))) / 10) };
+  }
+  return e;
+}
+
 async function one(i) {
   const [lat, lon, base, top, shf] = GEO2[i]; if (lat == null) throw new Error('no coords');
   const sh = shf === 1, mid = Math.round((base + top) / 2);
   const years = []; for (let y = FIRST; y <= LAST; y++) years.push(y);
   // ERA5 long record (snowfall does not depend on the elevation asked for; temperature does)
-  const e = bySeason(await seasons(lat, lon, mid, sh, 'era5', years, ['snowfall_sum']), sh, ['snowfall_sum']);
+  const e = await era5(i);
   if (e.length < 20) throw new Error('few ERA5 seasons ' + e.length);
   const md = e[0][1].map(x => x[0]);
   const mean = md.map((_, d) => avg(e.map(([y, a]) => a[d][1])));
@@ -73,8 +88,9 @@ function write(state) {
   const ids = Object.keys(st.done).map(Number).sort((a, b) => a - b);
   fs.writeFileSync(OUT, [HEADER, ...ids.map(i => st.done[i])].map(r => r.join(',')).join('\n') + '\n');
   const failed = Object.keys(st.fail).filter(k => st.fail[k] >= 2 && !st.done[k]);
-  const done = ids.length >= TOTAL || (state === 'complete' && ids.length + failed.length >= TOTAL);
-  const line = `${ids.length} of ${TOTAL} resorts done; stopped: ${state}` + (failed.length ? `; no data for #${failed.join(', #')}` : '');
+  const climN = Object.keys(st.clim || {}).length;
+  const done = state === 'complete' && ids.length + failed.length >= TOTAL && climN >= ids.length;
+  const line = `${ids.length} of ${TOTAL} resorts done (daily averages kept for ${climN}); stopped: ${state}` + (failed.length ? `; no data for #${failed.join(', #')}` : '');
   fs.writeFileSync('status_long.txt', line + '\n' + new Date().toISOString() + '\nlast: ' + LASTMSG + '\n');
   console.log(line);
   if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `done=${done}\n`);
@@ -88,6 +104,16 @@ async function run() {
       if (/[Dd]aily/.test(LASTMSG)) return 'daily limit';
       if (/429/.test(LASTMSG)) { await sleep(70000); i--; continue; }
       st.fail[i] = (st.fail[i] || 0) + 1; save();
+    }
+    await sleep(1500);
+  }
+  for (let i = 0; i < TOTAL; i++) {
+    if (!st.done[i] || (st.clim && st.clim[i])) continue;
+    try { await era5(i); save(); LASTMSG = 'clim ' + i; }
+    catch (err) {
+      LASTMSG = String(err.message || err) + ' @clim ' + i;
+      if (/[Dd]aily/.test(LASTMSG)) return 'daily limit';
+      if (/429/.test(LASTMSG)) { await sleep(70000); i--; continue; }
     }
     await sleep(1500);
   }
