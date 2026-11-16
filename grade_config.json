@@ -13,7 +13,7 @@
   "good_days": 3,
   "slushy_hours": 3,
   "default_points": {
-    "powder": 100,
+    "powder": 80,
     "good": 80,
     "packed": 50,
     "slushy": 40,
@@ -29,6 +29,7 @@
     "powder": "15 cm+ in 24 h or 25 cm+ in 48 h with no wetting since, falling at -3 C or colder (snow-weighted); otherwise Good. Wind is not used: the model's 10 m gusts on snowy days are mostly 80-190 km/h in mountain grid cells (median about 100 km/h at Les 3 Vallees mid-mountain), so they cannot tell wind-packed snow from sheltered snow (16 Nov 2026).",
     "good": "5 cm+ in the last 3 days with no wetting since",
     "slushy_hours": "daytime (09:00-17:59) hours above +1 C that make the snow soft and heavy",
-    "icysoft": "a refrozen morning that softens by afternoon"
+    "icysoft": "a refrozen morning that softens by afternoon",
+    "default_points": "Owner, 16 Nov 2026: a powder day counts the same as a good snow day, and snow density (light or heavy) matters little as long as snow is regular. So Powder = Good = 80; the -3 C density rule now only labels days, it does not change scores."
   }
 }
