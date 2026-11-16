@@ -8,18 +8,25 @@
   "powder_24h_cm": 15,
   "powder_48h_cm": 25,
   "powder_max_snow_temp_c": -3,
-  "powder_max_gust_kmh": 50,
+  "powder_max_gust_kmh": null,
   "good_cm": 5,
   "good_days": 3,
   "slushy_hours": 3,
-  "default_points": { "powder": 100, "good": 80, "packed": 50, "slushy": 40, "icysoft": 20, "icy": 0 },
+  "default_points": {
+    "powder": 100,
+    "good": 80,
+    "packed": 50,
+    "slushy": 40,
+    "icysoft": 20,
+    "icy": 0
+  },
   "_notes": {
     "rain_day_mm": "rain of 1 mm or more in the day wets the surface (and makes that day Slushy)",
     "melt_hours": "hours above +0.5 C that wet the surface",
     "refreeze_c": "overnight low (00:00-08:59) that refreezes a wet surface into a crust",
     "icy_days": "a crust counts as Icy on the morning it forms and the next day; after that grooming has usually broken it up (Packed)",
     "cover_cm": "new snow that buries a crust",
-    "powder": "15 cm+ in 24 h or 25 cm+ in 48 h with no wetting since, falling at -3 C or colder (snow-weighted) with gusts under 50 km/h; otherwise Good",
+    "powder": "15 cm+ in 24 h or 25 cm+ in 48 h with no wetting since, falling at -3 C or colder (snow-weighted); otherwise Good. Wind is not used: the model's 10 m gusts on snowy days are mostly 80-190 km/h in mountain grid cells (median about 100 km/h at Les 3 Vallees mid-mountain), so they cannot tell wind-packed snow from sheltered snow (16 Nov 2026).",
     "good": "5 cm+ in the last 3 days with no wetting since",
     "slushy_hours": "daytime (09:00-17:59) hours above +1 C that make the snow soft and heavy",
     "icysoft": "a refrozen morning that softens by afternoon"

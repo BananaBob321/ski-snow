@@ -51,7 +51,7 @@ function gradeSeason(d, lead, k) {
         let w = 0, wt = 0, gust = 0;
         for (let q = Math.max(from, t - 1); q <= t; q++) if (d[q].S > 0 && d[q].ts != null) { w += d[q].S; wt += d[q].S * d[q].ts; gust = Math.max(gust, d[q].gs || 0); }
         const tsnow = w ? wt / w : 0;
-        g = tsnow <= C.powder_max_snow_temp_c && gust < C.powder_max_gust_kmh ? 'powder' : 'good';
+        g = tsnow <= C.powder_max_snow_temp_c && gust < (C.powder_max_gust_kmh ?? Infinity) ? 'powder' : 'good';
       } else if (s3 >= C.good_cm) g = 'good';
       else g = 'packed';
     }

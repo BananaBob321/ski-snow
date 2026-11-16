@@ -102,18 +102,28 @@ function status(state) {
   if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `done=${done}\n`);
 }
 
+// Download order: Japan, Australia, New Zealand, China and Korea first (trip candidates and the owner's
+// reference resorts, e.g. Hotham and Yabuli), then everything else by resort number.
+function order() {
+  const rank = ([la, lo]) => la > 30 && la < 46 && lo > 128 && lo < 146 ? 0 : la < -30 && lo > 140 && lo < 155 ? 1
+    : la < -38 && lo > 165 ? 2 : la > 35 && lo > 100 && lo < 135 ? 3 : 4;
+  return GEO2.map((g, i) => [rank(g), i]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).map(x => x[1]);
+}
+
 async function run() {
+  const ORDER = order();
   for (const h of HEIGHTS) {
     let streak = 0, net = 0;
-    for (let i = 0; i < TOTAL; i++) {
+    for (let n = 0; n < TOTAL; n++) {
+      const i = ORDER[n];
       const S = st[h];
       if (S.done[i] || (S.fail[i] || 0) >= 2) continue;
       try { S.done[i] = await one(i, h); save(); LASTMSG = `ok ${h} ${i}`; streak = 0; net = 0; }
       catch (err) {
         LASTMSG = String(err.message || err) + ` @${h} ${i}`;
         if (/[Dd]aily/.test(LASTMSG)) return 'daily limit';
-        if (/429/.test(LASTMSG)) { await sleep(70000); i--; continue; }
-        if (/fetch failed|ECONNRESET|ETIMEDOUT|socket|Unexpected token/i.test(LASTMSG) && ++net <= 6) { await sleep(30000); i--; continue; }
+        if (/429/.test(LASTMSG)) { await sleep(70000); n--; continue; }
+        if (/fetch failed|ECONNRESET|ETIMEDOUT|socket|Unexpected token/i.test(LASTMSG) && ++net <= 6) { await sleep(30000); n--; continue; }
         S.fail[i] = (S.fail[i] || 0) + 1; S.err[i] = LASTMSG.slice(0, 200); save();
         if (++streak >= 5) return 'stopped after 5 errors in a row (saving the daily allowance): ' + LASTMSG.slice(0, 150);
       }
@@ -129,4 +139,4 @@ if (require.main === module) (async () => {
   status(state); process.exit(0);
 })().catch(e => { console.error(e); try { status('error: ' + e.message); } catch (_) {} process.exit(1); });
 
-module.exports = { daily, FIELDS, one };
+module.exports = { daily, FIELDS, one, order };
