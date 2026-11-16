@@ -4,7 +4,10 @@ name: Snow data
 # resorts as the allowance allows, then commit the results. Turns itself off when all three sets are done.
 #   run.cjs  -> snow_raw.csv  (ECMWF IFS 9 km, 2017 onwards, mid-mountain)
 #   fresh.cjs -> snow_fresh.csv (IFS 9 km, mid-mountain: thaw, freeze-thaw, sunny and rain days, days since snow)
+#   days.cjs -> data/days/<height>/<#>.json.gz (IFS 9 km, day-by-day summaries at mid, base and top, for day grades)
+#   grade.cjs -> snow_grades.csv (each day graded powder / good / packed / slushy / icy; no downloads)
 #   long.cjs -> snow_long.csv (ERA5, 1991 onwards, timing; IFS at the base for rain and temperature)
+# All downloads share one daily budget (budget.cjs) to stay under Open-Meteo's free-tier limit.
 on:
   schedule:
     - cron: "23 0 * * *"   # 00:23 UTC = 11:23am Melbourne in daylight saving
@@ -36,6 +39,14 @@ jobs:
         run: node fresh.cjs
         env:
           MINUTES: "120"
+      - id: days
+        if: always()
+        run: node days.cjs
+        env:
+          MINUTES: "150"
+      - id: grade
+        if: always()
+        run: node grade.cjs
       - id: long
         if: always()
         run: node long.cjs
@@ -46,12 +57,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A state.json snow_raw.csv status.txt fresh_state.json snow_fresh.csv status_fresh.txt long_state.json snow_long.csv status_long.txt 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "Snow data: $(head -1 status.txt) | fresh: $(head -1 status_fresh.txt 2>/dev/null) | long record: $(head -1 status_long.txt 2>/dev/null)"
+          for f in state.json snow_raw.csv status.txt fresh_state.json snow_fresh.csv status_fresh.txt long_state.json snow_long.csv status_long.txt days_state.json status_days.txt data/days snow_grades.csv budget_state.json; do [ -e "$f" ] && git add -A "$f"; done
+          git diff --cached --quiet || git commit -m "Snow data: $(head -1 status.txt) | fresh: $(head -1 status_fresh.txt 2>/dev/null) | days: $(head -1 status_days.txt 2>/dev/null) | long record: $(head -1 status_long.txt 2>/dev/null)"
           git pull --rebase -X theirs || true
           git push
       - name: Turn off when finished
-        if: steps.snow.outputs.done == 'true' && steps.fresh.outputs.done == 'true' && steps.long.outputs.done == 'true'
+        if: steps.snow.outputs.done == 'true' && steps.fresh.outputs.done == 'true' && steps.days.outputs.done == 'true' && steps.long.outputs.done == 'true'
         run: gh workflow disable snow.yml
         env:
           GH_TOKEN: ${{ github.token }}

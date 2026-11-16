@@ -9,6 +9,7 @@
 //   snow days a week   days with 1 cm or more of snowfall, per week (model; reads low but consistent)
 // Progress in fresh_state.json, results in snow_fresh.csv. Stops at the daily limit and resumes next run.
 const fs = require('fs'), vm = require('vm');
+const budget = require('./budget.cjs');
 globalThis.window = globalThis;
 globalThis.localStorage = { getItem: () => null, setItem: () => {} };
 vm.runInThisContext(fs.readFileSync('runner.js', 'utf8'), { filename: 'runner.js' }); // for GEO2
@@ -23,6 +24,7 @@ const LEAD = 14; // days fetched before the window so "days since snow" starts f
 let LASTMSG = '';
 
 async function get(u) {
+  budget.take(u);
   const r = await fetch(u);
   if (r.status === 429) { const t = await r.text(); throw new Error('429 ' + t.slice(0, 90)); }
   const j = await r.json(); if (j.error) throw new Error(String(j.reason)); return j;

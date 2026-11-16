@@ -2,6 +2,7 @@
 // (ECMWF IFS 9 km, seasons from 2017), from Open-Meteo's free tier. Progress in long_state.json,
 // results in snow_long.csv. Stops at the daily limit and resumes next run.
 const fs = require('fs'), vm = require('vm');
+const budget = require('./budget.cjs');
 globalThis.window = globalThis;
 globalThis.localStorage = { getItem: () => null, setItem: () => {} };
 vm.runInThisContext(fs.readFileSync('runner.js', 'utf8'), { filename: 'runner.js' }); // for GEO2 and omFmt
@@ -13,6 +14,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 let LASTMSG = '';
 
 async function get(u) {
+  budget.take(u);
   const r = await fetch(u);
   if (r.status === 429) { const t = await r.text(); throw new Error('429 ' + t.slice(0, 90)); }
   const j = await r.json(); if (j.error) throw new Error(String(j.reason)); return j;
@@ -56,6 +58,7 @@ async function era5(i) {
 }
 
 async function one(i) {
+  budget.need(1140); // about 35 ERA5 + 9 IFS season requests of ~181 days
   const [lat, lon, base, top, shf] = GEO2[i]; if (lat == null) throw new Error('no coords');
   const sh = shf === 1, mid = Math.round((base + top) / 2);
   const years = []; for (let y = FIRST; y <= LAST; y++) years.push(y);
