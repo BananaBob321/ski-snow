@@ -1,482 +1,482 @@
-#,Observed snow per week in trip window (cm; ski sheet Calc column M, 16 Nov 2026)
-0,31.86
-1,28.58
-2,34.58
-3,18.94
-4,40.81
-5,36.87
-6,40.11
-7,19.12
-8,34.25
-9,26.49
-10,27.09
-11,26.83
-12,48.65
-13,20.63
-14,34.54
-15,33.75
-16,36.63
-17,33.21
-18,24.21
-19,33.42
-20,37.69
-21,15.5
-22,47.33
-23,56.96
-24,47.56
-25,33.5
-26,28.17
-27,22.25
-28,24.23
-29,35.15
-30,19.85
-31,16.35
-32,16.32
-33,29.58
-34,20.88
-35,40.05
-36,30.90
-37,30.56
-38,14.35
-39,25.42
-40,23.22
-41,25.59
-42,32.49
-43,8.60
-44,32.73
-45,35.65
-46,25.65
-47,26.88
-48,19.88
-49,29.11
-50,28.34
-51,31.85
-52,20.84
-53,29.11
-54,24.93
-55,34.92
-56,16.85
-57,22.92
-58,18.73
-59,26.64
-60,13.42
-61,25.15
-62,24.21
-63,30.92
-64,21.33
-65,45.18
-66,22.29
-67,28.19
-68,24
-69,33.19
-70,21.27
-71,22
-72,36.73
-73,32.12
-74,17.85
-75,24.99
-76,21.83
-77,56.30
-78,22.42
-79,22.13
-80,32.29
-81,20.6
-82,10.73
-83,27.58
-84,27.07
-85,13.42
-86,20.84
-87,15.69
-88,30.29
-89,22.88
-90,35.37
-91,39.73
-92,48.65
-93,12.42
-94,33.21
-95,27.10
-96,32.58
-97,23.73
-98,17.12
-99,43.08
-100,19.54
-101,22.88
-102,16.27
-103,24.85
-104,22.42
-105,20.52
-106,37.54
-107,19.46
-108,34.02
-109,29.15
-110,30.92
-111,22.23
-112,26.89
-113,19.31
-114,19.65
-115,32.12
-116,21.77
-117,34.23
-118,44.54
-119,26.96
-120,26.42
-121,11.13
-122,39.38
-123,21.81
-124,29.15
-125,36.17
-126,30.92
-127,17.78
-128,17.42
-129,28.65
-130,26.89
-131,14.83
-132,55.69
-133,19.65
-134,20.41
-135,34.46
-136,15.58
-137,44.05
-138,14.88
-139,25.89
-140,
-141,17.31
-142,13.15
-143,30.69
-144,20.67
-145,35.59
-146,32.04
-147,22
-148,20.46
-149,18.19
-150,18.54
-151,23.85
-152,12.42
-153,24.42
-154,14.69
-155,22.15
-156,16.30
-157,29.27
-158,48.65
-159,23.15
-160,34.15
-161,32.58
-162,29.89
-163,
-164,19.85
-165,27.42
-166,48.30
-167,23.09
-168,48.65
-169,18.15
-170,20.35
-171,51.79
-172,29.97
-173,48.65
-174,17.73
-175,35.04
-176,28.58
-177,12
-178,46.71
-179,25
-180,17.53
-181,55.63
-182,15.42
-183,31.69
-184,27.31
-185,49.63
-186,21.27
-187,15.52
-188,26.73
-189,35.69
-190,19.85
-191,29.31
-192,33.15
-193,26.89
-194,15.36
-195,36.41
-196,56.54
-197,29.63
-198,27.85
-199,32.69
-200,13.58
-201,14.83
-202,21.19
-203,29.42
-204,13.67
-205,63.74
-206,29.96
-207,21.63
-208,16.31
-209,18.02
-210,21.62
-211,18.73
-212,16.04
-213,50.37
-214,26
-215,30.65
-216,26.15
-217,26
-218,10.98
-219,24.54
-220,23.94
-221,32.17
-222,20.44
-223,24.15
-224,11.85
-225,37.58
-226,9.42
-227,14.88
-228,12
-229,23.46
-230,20.52
-231,16.27
-232,65.5
-233,19.12
-234,23.69
-235,31.12
-236,27.88
-237,45.71
-238,11.31
-239,15.46
-240,18.27
-241,28.81
-242,13.42
-243,17.65
-244,52.10
-245,60.92
-246,38.38
-247,30
-248,27.9
-249,12.15
-250,49.92
-251,52.65
-252,32.46
-253,13.69
-254,28.46
-255,15.85
-256,20.73
-257,16.46
-258,27.33
-259,41.06
-260,17.77
-261,26.15
-262,15.87
-263,27.88
-264,15.58
-265,17.46
-266,37
-267,18.68
-268,24.17
-269,25.88
-270,15.15
-271,31
-272,41.42
-273,47.21
-274,24.35
-275,10.98
-276,26.89
-277,23.89
-278,13.73
-279,26.04
-280,19.38
-281,12.42
-282,29.88
-283,27.31
-284,
-285,12.88
-286,26.98
-287,13.88
-288,59.65
-289,15.15
-290,14
-291,21.58
-292,28.42
-293,40.43
-294,27.19
-295,22.46
-296,45.31
-297,32.04
-298,33.58
-299,15.31
-300,13.42
-301,24.88
-302,11.58
-303,13.31
-304,13.42
-305,29.31
-306,3.85
-307,26.77
-308,38.15
-309,12.73
-310,21.31
-311,23.42
-312,25.65
-313,27.15
-314,27.73
-315,19.39
-316,18.31
-317,32.15
-318,29.15
-319,37.15
-320,11.15
-321,28.15
-322,36.09
-323,25.04
-324,56.80
-325,46.13
-326,22.58
-327,21.04
-328,21.85
-329,16.27
-330,21.46
-331,11.85
-332,35.46
-333,20.62
-334,30.73
-335,15.27
-336,35.73
-337,30.31
-338,30.62
-339,11.42
-340,10.28
-341,29.15
-342,33.46
-343,5.31
-344,16.31
-345,11.15
-346,12.54
-347,29
-348,29.62
-349,22
-350,9.73
-351,20.41
-352,48.81
-353,9.85
-354,18.49
-355,35.15
-356,
-357,21.12
-358,23.22
-359,27.46
-360,17.15
-361,15.93
-362,12.85
-363,17.1
-364,29.74
-365,21.46
-366,12.73
-367,29.62
-368,22.85
-369,21.42
-370,25.73
-371,26.42
-372,25.88
-373,14
-374,27.73
-375,31.73
-376,19.42
-377,23.58
-378,24.73
-379,19.90
-380,5.42
-381,27.85
-382,8.15
-383,28.27
-384,12.85
-385,24.88
-386,25.92
-387,28.96
-388,39.31
-389,28.42
-390,9
-391,52.19
-392,
-393,11.15
-394,30.27
-395,13.73
-396,50.5
-397,36.62
-398,15.15
-399,25.77
-400,23.37
-401,30.78
-402,10.3
-403,7.51
-404,6.60
-405,47.65
-406,36.5
-407,18.31
-408,29.12
-409,5.42
-410,14.31
-411,23.88
-412,18.49
-413,19.15
-414,19.58
-415,11.17
-416,18.81
-417,20.42
-418,19.58
-419,29.15
-420,40.38
-421,25.04
-422,25.42
-423,19.31
-424,29.15
-425,13.15
-426,58.62
-427,30.46
-428,11.15
-429,17.85
-430,21.04
-431,11.31
-432,34.15
-433,4
-434,3.85
-435,47.5
-436,13.28
-437,52.9
-438,10.3
-439,27.33
-440,22.71
-441,15.73
-442,20.62
-443,22.73
-444,24.99
-445,66.5
-446,18.15
-447,13.23
-448,15
-449,18.31
-450,20
-451,20.42
-452,29.89
-453,16
-454,10
-455,64.15
-456,22.42
-457,
-458,19
-459,45.65
-460,34
-461,16.42
-462,36.96
-463,7
-464,20.27
-465,20.41
-466,12.39
-467,8.85
-468,22
-469,28.85
-470,13.73
-471,9
-472,9.15
-473,16.27
-474,24.35
-475,13.96
-476,9.85
-477,3
-478,13.27
-479,28.15
-480,14.42
+#,Observed snow per week in trip window (cm),Source
+0,31.86,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+1,28.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+2,34.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+3,18.94,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+4,40.81,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+5,36.87,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+6,40.11,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+7,19.12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+8,34.25,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+9,26.49,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+10,27.09,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+11,29.86,OnTheSnow Dec+Jan average / 0.97
+12,36.07,OnTheSnow Dec+Jan average / 0.97
+13,20.63,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+14,34.54,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+15,33.75,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+16,34.0,OnTheSnow Dec+Jan average / 0.97
+17,31.63,OnTheSnow Dec+Jan average / 0.97
+18,24.21,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+19,33.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+20,37.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+21,15.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+22,34.89,OnTheSnow Dec+Jan average / 0.97
+23,41.98,OnTheSnow Dec+Jan average / 0.97
+24,46.42,OnTheSnow Dec+Jan average / 0.97
+25,33.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+26,28.17,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+27,22.25,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+28,24.23,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+29,35.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+30,19.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+31,16.35,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+32,16.32,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+33,29.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+34,20.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+35,42.57,OnTheSnow Dec+Jan average / 0.97
+36,30.90,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+37,30.56,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+38,14.35,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+39,25.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+40,32.52,OnTheSnow Dec+Jan average / 0.97
+41,25.59,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+42,28.09,OnTheSnow Dec+Jan average / 0.97
+43,8.60,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+44,32.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+45,35.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+46,35.48,OnTheSnow Dec+Jan average / 0.97
+47,26.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+48,19.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+49,38.43,OnTheSnow Dec+Jan average / 0.97
+50,28.34,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+51,31.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+52,21.58,OnTheSnow Dec+Jan average / 0.97
+53,19.22,OnTheSnow Dec+Jan average / 0.97
+54,23.65,OnTheSnow Dec+Jan average / 0.97
+55,34.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+56,16.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+57,22.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+58,18.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+59,27.2,OnTheSnow Dec+Jan average / 0.97
+60,13.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+61,25.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+62,24.21,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+63,30.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+64,21.33,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+65,28.68,OnTheSnow Dec+Jan average / 0.97
+66,22.29,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+67,28.19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+68,24,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+69,25.72,OnTheSnow Dec+Jan average / 0.97
+70,21.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+71,22,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+72,36.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+73,32.12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+74,17.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+75,22.47,OnTheSnow Dec+Jan average / 0.97
+76,24.54,OnTheSnow Dec+Jan average / 0.97
+77,57.95,OnTheSnow Dec+Jan average / 0.97
+78,22.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+79,22.76,OnTheSnow Dec+Jan average / 0.97
+80,32.29,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+81,20.7,OnTheSnow Dec+Jan average / 0.97
+82,10.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+83,27.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+84,20.4,OnTheSnow Dec+Jan average / 0.97
+85,13.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+86,25.43,OnTheSnow Dec+Jan average / 0.97
+87,15.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+88,30.75,OnTheSnow Dec+Jan average / 0.97
+89,22.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+90,35.37,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+91,39.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+92,48.49,OnTheSnow Dec+Jan average / 0.97
+93,12.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+94,33.21,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+95,27.10,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+96,32.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+97,23.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+98,17.12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+99,24.54,OnTheSnow Dec+Jan average / 0.97
+100,19.54,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+101,22.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+102,16.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+103,24.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+104,22.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+105,40.5,OnTheSnow Dec+Jan average / 0.97
+106,49.96,OnTheSnow Dec+Jan average / 0.97
+107,19.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+108,44.05,OnTheSnow Dec+Jan average / 0.97
+109,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+110,34.89,OnTheSnow Dec+Jan average / 0.97
+111,32.82,OnTheSnow Dec+Jan average / 0.97
+112,17.44,OnTheSnow Dec+Jan average / 0.97
+113,19.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+114,13.3,OnTheSnow Dec+Jan average / 0.97
+115,31.93,OnTheSnow Dec+Jan average / 0.97
+116,21.77,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+117,24.24,OnTheSnow Dec+Jan average / 0.97
+118,43.16,OnTheSnow Dec+Jan average / 0.97
+119,26.96,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+120,26.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+121,11.13,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+122,39.62,OnTheSnow Dec+Jan average / 0.97
+123,21.81,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+124,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+125,26.02,OnTheSnow Dec+Jan average / 0.97
+126,30.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+127,17.15,OnTheSnow Dec+Jan average / 0.97
+128,17.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+129,28.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+130,29.56,OnTheSnow Dec+Jan average / 0.97
+131,15.08,OnTheSnow Dec+Jan average / 0.97
+132,55.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+133,19.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+134,24.83,OnTheSnow Dec+Jan average / 0.97
+135,29.27,OnTheSnow Dec+Jan average / 0.97
+136,15.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+137,35.48,OnTheSnow Dec+Jan average / 0.97
+138,14.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+139,16.85,OnTheSnow Dec+Jan average / 0.97
+140,,
+141,17.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+142,13.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+143,31.93,OnTheSnow Dec+Jan average / 0.97
+144,20.67,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+145,40.8,OnTheSnow Dec+Jan average / 0.97
+146,32.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+147,22,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+148,20.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+149,18.19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+150,15.96,OnTheSnow Dec+Jan average / 0.97
+151,23.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+152,12.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+153,24.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+154,14.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+155,21.29,OnTheSnow Dec+Jan average / 0.97
+156,16.30,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+157,29.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+158,49.96,OnTheSnow Dec+Jan average / 0.97
+159,23.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+160,34.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+161,32.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+162,28.68,OnTheSnow Dec+Jan average / 0.97
+163,,
+164,19.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+165,27.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+166,39.02,OnTheSnow Dec+Jan average / 0.97
+167,16.26,OnTheSnow Dec+Jan average / 0.97
+168,26.31,OnTheSnow Dec+Jan average / 0.97
+169,18.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+170,20.35,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+171,36.07,OnTheSnow Dec+Jan average / 0.97
+172,19.22,OnTheSnow Dec+Jan average / 0.97
+173,51.74,OnTheSnow Dec+Jan average / 0.97
+174,17.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+175,35.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+176,28.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+177,12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+178,33.7,OnTheSnow Dec+Jan average / 0.97
+179,25,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+180,12.71,OnTheSnow Dec+Jan average / 0.97
+181,44.05,OnTheSnow Dec+Jan average / 0.97
+182,15.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+183,20.99,OnTheSnow Dec+Jan average / 0.97
+184,27.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+185,45.23,OnTheSnow Dec+Jan average / 0.97
+186,21.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+187,15.52,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+188,26.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+189,59.13,OnTheSnow Dec+Jan average / 0.97
+190,19.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+191,29.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+192,33.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+193,17.74,OnTheSnow Dec+Jan average / 0.97
+194,36.96,OnTheSnow Dec+Jan average / 0.97
+195,34.29,OnTheSnow Dec+Jan average / 0.97
+196,28.97,OnTheSnow Dec+Jan average / 0.97
+197,29.63,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+198,27.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+199,32.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+200,13.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+201,14.49,OnTheSnow Dec+Jan average / 0.97
+202,21.19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+203,29.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+204,13.67,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+205,46.71,OnTheSnow Dec+Jan average / 0.97
+206,29.96,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+207,21.29,OnTheSnow Dec+Jan average / 0.97
+208,16.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+209,18.02,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+210,21.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+211,18.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+212,16.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+213,37.25,OnTheSnow Dec+Jan average / 0.97
+214,26,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+215,30.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+216,26.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+217,26,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+218,10.94,OnTheSnow Dec+Jan average / 0.97
+219,24.54,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+220,23.94,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+221,32.17,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+222,20.44,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+223,24.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+224,11.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+225,37.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+226,9.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+227,14.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+228,12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+229,23.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+230,25.13,OnTheSnow Dec+Jan average / 0.97
+231,16.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+232,65.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+233,19.12,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+234,23.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+235,33.7,OnTheSnow Dec+Jan average / 0.97
+236,27.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+237,45.71,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+238,11.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+239,15.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+240,18.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+241,28.81,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+242,13.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+243,17.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+244,34.29,OnTheSnow Dec+Jan average / 0.97
+245,60.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+246,38.38,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+247,30,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+248,20.99,OnTheSnow Dec+Jan average / 0.97
+249,12.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+250,53.22,OnTheSnow Dec+Jan average / 0.97
+251,52.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+252,32.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+253,13.69,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+254,28.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+255,15.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+256,20.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+257,16.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+258,24.54,OnTheSnow Dec+Jan average / 0.97
+259,31.34,OnTheSnow Dec+Jan average / 0.97
+260,17.77,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+261,26.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+262,15.87,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+263,27.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+264,15.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+265,17.74,OnTheSnow Dec+Jan average / 0.97
+266,37,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+267,24.54,OnTheSnow Dec+Jan average / 0.97
+268,18.63,OnTheSnow Dec+Jan average / 0.97
+269,25.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+270,15.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+271,31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+272,30.45,OnTheSnow Dec+Jan average / 0.97
+273,37.25,OnTheSnow Dec+Jan average / 0.97
+274,24.35,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+275,10.64,OnTheSnow Dec+Jan average / 0.97
+276,13.9,OnTheSnow Dec+Jan average / 0.97
+277,15.37,OnTheSnow Dec+Jan average / 0.97
+278,13.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+279,26.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+280,14.19,OnTheSnow Dec+Jan average / 0.97
+281,12.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+282,29.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+283,27.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+284,,
+285,12.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+286,25.43,OnTheSnow Dec+Jan average / 0.97
+287,13.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+288,59.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+289,15.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+290,14,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+291,21.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+292,28.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+293,29.86,OnTheSnow Dec+Jan average / 0.97
+294,27.19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+295,22.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+296,45.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+297,32.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+298,33.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+299,15.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+300,13.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+301,24.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+302,11.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+303,13.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+304,13.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+305,29.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+306,3.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+307,26.77,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+308,38.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+309,12.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+310,21.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+311,23.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+312,25.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+313,27.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+314,27.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+315,24.83,OnTheSnow Dec+Jan average / 0.97
+316,18.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+317,32.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+318,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+319,37.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+320,11.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+321,28.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+322,28.97,OnTheSnow Dec+Jan average / 0.97
+323,25.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+324,53.81,OnTheSnow Dec+Jan average / 0.97
+325,32.82,OnTheSnow Dec+Jan average / 0.97
+326,22.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+327,21.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+328,21.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+329,16.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+330,21.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+331,11.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+332,35.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+333,20.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+334,30.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+335,15.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+336,35.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+337,30.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+338,30.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+339,11.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+340,13.01,OnTheSnow Dec+Jan average / 0.97
+341,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+342,33.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+343,5.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+344,16.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+345,11.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+346,12.54,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+347,29,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+348,29.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+349,22,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+350,9.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+351,20.99,OnTheSnow Dec+Jan average / 0.97
+352,49.67,OnTheSnow Dec+Jan average / 0.97
+353,9.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+354,20.7,OnTheSnow Dec+Jan average / 0.97
+355,35.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+356,,
+357,16.26,OnTheSnow Dec+Jan average / 0.97
+358,21.29,OnTheSnow Dec+Jan average / 0.97
+359,27.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+360,17.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+361,23.65,OnTheSnow Dec+Jan average / 0.97
+362,12.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+363,29.86,OnTheSnow Dec+Jan average / 0.97
+364,15.96,OnTheSnow Dec+Jan average / 0.97
+365,21.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+366,12.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+367,29.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+368,22.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+369,21.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+370,25.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+371,19.22,OnTheSnow Dec+Jan average / 0.97
+372,25.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+373,14,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+374,27.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+375,31.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+376,19.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+377,23.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+378,24.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+379,16.56,OnTheSnow Dec+Jan average / 0.97
+380,5.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+381,27.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+382,8.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+383,28.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+384,12.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+385,24.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+386,25.92,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+387,28.96,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+388,15.96,OnTheSnow Dec+Jan average / 0.97
+389,28.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+390,9,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+391,52.19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+392,,
+393,11.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+394,30.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+395,13.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+396,50.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+397,36.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+398,15.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+399,25.77,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+400,21.58,OnTheSnow Dec+Jan average / 0.97
+401,30.78,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+402,21.58,OnTheSnow Dec+Jan average / 0.97
+403,5.03,OnTheSnow Dec+Jan average / 0.97
+404,8.87,OnTheSnow Dec+Jan average / 0.97
+405,47.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+406,36.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+407,18.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+408,29.27,OnTheSnow Dec+Jan average / 0.97
+409,5.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+410,12.12,OnTheSnow Dec+Jan average / 0.97
+411,23.88,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+412,18.33,OnTheSnow Dec+Jan average / 0.97
+413,19.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+414,19.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+415,8.87,OnTheSnow Dec+Jan average / 0.97
+416,22.76,OnTheSnow Dec+Jan average / 0.97
+417,20.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+418,19.58,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+419,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+420,40.38,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+421,25.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+422,25.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+423,19.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+424,29.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+425,13.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+426,58.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+427,30.46,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+428,11.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+429,17.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+430,21.04,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+431,11.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+432,34.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+433,4,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+434,3.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+435,45.82,OnTheSnow Dec+Jan average / 0.97
+436,17.74,OnTheSnow Dec+Jan average / 0.97
+437,23.95,OnTheSnow Dec+Jan average / 0.97
+438,5.91,OnTheSnow Dec+Jan average / 0.97
+439,17.44,OnTheSnow Dec+Jan average / 0.97
+440,22.71,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+441,15.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+442,20.62,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+443,22.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+444,16.26,OnTheSnow Dec+Jan average / 0.97
+445,66.5,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+446,18.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+447,10.35,OnTheSnow Dec+Jan average / 0.97
+448,15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+449,18.31,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+450,20,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+451,20.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+452,26.9,OnTheSnow Dec+Jan average / 0.97
+453,16,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+454,10,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+455,64.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+456,22.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+457,,
+458,19,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+459,45.65,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+460,34,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+461,16.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+462,38.43,OnTheSnow Dec+Jan average / 0.97
+463,7,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+464,20.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+465,17.44,OnTheSnow Dec+Jan average / 0.97
+466,12.71,OnTheSnow Dec+Jan average / 0.97
+467,8.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+468,22,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+469,28.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+470,13.73,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+471,9,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+472,9.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+473,16.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+474,24.35,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+475,13.96,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+476,9.85,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+477,3,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+478,13.27,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+479,28.15,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
+480,14.42,ski sheet Calc column M (snow-forecast.com window average, regional factor for inland North America)
