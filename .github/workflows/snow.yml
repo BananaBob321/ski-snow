@@ -48,6 +48,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A state.json snow_raw.csv status.txt fresh_state.json snow_fresh.csv status_fresh.txt long_state.json snow_long.csv status_long.txt 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Snow data: $(head -1 status.txt) | fresh: $(head -1 status_fresh.txt 2>/dev/null) | long record: $(head -1 status_long.txt 2>/dev/null)"
+          git pull --rebase -X theirs || true
           git push
       - name: Turn off when finished
         if: steps.snow.outputs.done == 'true' && steps.fresh.outputs.done == 'true' && steps.long.outputs.done == 'true'
