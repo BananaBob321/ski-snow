@@ -1,0 +1,3 @@
+mid 118/481, base 0/481, top 0/481; stopped: daily limit
+2026-11-16T05:59:12.891Z
+last: Daily budget reached (9452 of 9500 weighted calls used today) @mid 118
