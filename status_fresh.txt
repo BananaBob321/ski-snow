@@ -1,1 +1,2 @@
-0 of 481 resorts done; restarted 15 Nov 2026 with hourly temperature (daily max/min were mostly empty)
+481 of 481 resorts done; stopped: complete
+2026-11-16 (collected in a browser with the same method as fresh.cjs)
