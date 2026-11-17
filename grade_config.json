@@ -16,6 +16,7 @@
     "powder": 80,
     "good": 80,
     "packed": 50,
+    "hardpack": 0,
     "slushy": 40,
     "icysoft": 20,
     "icy": 0
@@ -30,6 +31,8 @@
     "good": "5 cm+ in the last 3 days with no wetting since",
     "slushy_hours": "daytime (09:00-17:59) hours above +1 C that make the snow soft and heavy",
     "icysoft": "a refrozen morning that softens by afternoon",
-    "default_points": "Owner, 16 Nov 2026: a powder day counts the same as a good snow day, and snow density (light or heavy) matters little as long as snow is regular. So Powder = Good = 80; the -3 C density rule now only labels days, it does not change scores."
-  }
+    "default_points": "Owner, 16 Nov 2026: a powder day counts the same as a good snow day, and snow density (light or heavy) matters little as long as snow is regular. So Powder = Good = 80; the -3 C density rule now only labels days, it does not change scores.",
+    "hardpack": "Hard-packed: a day that would be Packed, but more than 14 days since the last snowfall of 5 cm+ (old snow scraped and polished by skiers). Added 17 Nov 2026 after Yabuli (62% of days) and Beidahu (72%) graded as Packed; elsewhere 8% of days or fewer. Scored 0 like Icy, from Nathan's view of Yabuli: 'it gets no snow so its just ice'."
+  },
+  "hardpack_days": 14
 }

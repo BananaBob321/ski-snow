@@ -6,8 +6,8 @@
 // matches the observed figure in calib.csv (cm per week). Base and top use the mid-mountain scale.
 const fs = require('fs'), zlib = require('zlib'), path = require('path');
 const C = JSON.parse(fs.readFileSync('grade_config.json', 'utf8'));
-const HEIGHTS = ['mid', 'base', 'top'], GRADES = ['powder', 'good', 'packed', 'slushy', 'icysoft', 'icy'];
-const NAMES = { powder: 'Powder', good: 'Good', packed: 'Packed', slushy: 'Slushy', icysoft: 'Icy then soft', icy: 'Icy' };
+const HEIGHTS = ['mid', 'base', 'top'], GRADES = ['powder', 'good', 'packed', 'hardpack', 'slushy', 'icysoft', 'icy'];
+const NAMES = { powder: 'Powder', good: 'Good', packed: 'Packed', hardpack: 'Hard-packed', slushy: 'Slushy', icysoft: 'Icy then soft', icy: 'Icy' };
 const WINDOW = 52;
 
 function load(h, i) {
@@ -30,11 +30,12 @@ function gradeSeason(d, lead, k) {
   const n = d.length, cm = d.map(x => x.S * k);
   const wet = d.map(x => x.R >= C.rain_day_mm || x.h0 >= C.melt_hours);
   const sum = (a, b) => { let s = 0; for (let q = Math.max(0, a); q <= b; q++) s += cm[q]; return s; };
-  let lastWet = -1, lastCrust = -1;
+  let lastWet = -1, lastCrust = -1, lastSnow = 0; // lastSnow: assume snow at the start of the lead days
   const out = [];
   for (let t = 0; t < n; t++) {
     if (t > 0 && wet[t - 1] && d[t].tam != null && d[t].tam <= C.refreeze_c) lastCrust = t; // crust on this morning
     if (wet[t]) lastWet = t;
+    if (cm[t] >= C.good_cm) lastSnow = t;
     if (t < lead) continue;
     const x = d[t];
     let g;
@@ -53,7 +54,7 @@ function gradeSeason(d, lead, k) {
         const tsnow = w ? wt / w : 0;
         g = tsnow <= C.powder_max_snow_temp_c && gust < (C.powder_max_gust_kmh ?? Infinity) ? 'powder' : 'good';
       } else if (s3 >= C.good_cm) g = 'good';
-      else g = 'packed';
+      else g = t - lastSnow > (C.hardpack_days ?? Infinity) ? 'hardpack' : 'packed';
     }
     out.push(g);
   }
