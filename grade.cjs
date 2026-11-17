@@ -7,7 +7,7 @@
 const fs = require('fs'), zlib = require('zlib'), path = require('path');
 const C = JSON.parse(fs.readFileSync('grade_config.json', 'utf8'));
 const HEIGHTS = ['mid', 'base', 'top'], GRADES = ['powder', 'good', 'packed', 'hardpack', 'slushy', 'icysoft', 'icy'];
-const NAMES = { powder: 'Powder', good: 'Good', packed: 'Packed', hardpack: 'Icy, no new snow 14+ days', slushy: 'Slushy', icysoft: 'Icy then soft', icy: 'Icy' };
+const NAMES = { powder: 'Powder', good: 'Good', packed: 'Packed', hardpack: 'Icy - no new snow 14+ days', slushy: 'Slushy', icysoft: 'Icy then soft', icy: 'Icy' };
 const WINDOW = 52;
 
 function load(h, i) {
