@@ -20,15 +20,23 @@ function load(h, i) {
 }
 
 // Model snow water (mm) per window week at this height, averaged over seasons
+// Model rain on a day whose maximum at this height stays at or below rain_as_snow_max_c is counted as snow:
+// the 9 km model decides rain or snow at its own (often lower, warmer) grid height. Checked against Hotham,
+// 17-24 July 2024: the model had rain during freezing storms that resorts reported as 30-60 cm of snow.
+const adjust = d => d.map(x => x.R >= C.rain_day_mm && x.tx != null && x.tx <= C.rain_as_snow_max_c ? { ...x, S: x.S + x.R, R: 0 } : x);
+
 function modelWeekly(j) {
-  const v = Object.values(j.seasons).map(d => d.slice(j.lead).reduce((a, x) => a + x.S, 0) / (d.length - j.lead) * 7);
+  const v = Object.values(j.seasons).map(d => adjust(d).slice(j.lead).reduce((a, x) => a + x.S, 0) / (d.length - j.lead) * 7);
   return v.reduce((a, b) => a + b, 0) / v.length;
 }
 
 // Grade one season. d: days including lead days; k: cm per mm of model snow water.
-function gradeSeason(d, lead, k) {
-  const n = d.length, cm = d.map(x => x.S * k);
-  const wet = d.map(x => x.R >= C.rain_day_mm || x.h0 >= C.melt_hours);
+function gradeSeason(d0, lead, k) {
+  const d = adjust(d0), n = d.length, cm = d.map(x => x.S * k);
+  // melting: enough warm daytime hours and a warm enough maximum; a day with cover_cm+ of new snow is not a
+  // wetting day (fresh snow lies on top of whatever happened underneath)
+  const melt = d.map(x => x.h1d >= C.melt_hours && x.tx >= C.melt_max_c);
+  const wet = d.map((x, t) => (x.R >= C.rain_day_mm || melt[t]) && cm[t] < C.cover_cm);
   const sum = (a, b) => { let s = 0; for (let q = Math.max(0, a); q <= b; q++) s += cm[q]; return s; };
   let lastWet = -1, lastCrust = -1, lastSnow = 0; // lastSnow: assume snow at the start of the lead days
   const out = [];
@@ -40,9 +48,10 @@ function gradeSeason(d, lead, k) {
     const x = d[t];
     let g;
     const icy = lastCrust >= 0 && t - lastCrust < C.icy_days && sum(lastCrust, t) < C.cover_cm;
-    if (x.R >= C.rain_day_mm) g = 'slushy';
-    else if (icy) g = x.h1d >= C.slushy_hours ? 'icysoft' : 'icy';
-    else if (x.h1d >= C.slushy_hours) g = 'slushy';
+    const soft = x.h1d >= C.slushy_hours && x.tx >= C.slushy_max_c;
+    if (x.R >= C.rain_day_mm && cm[t] < C.cover_cm) g = 'slushy';
+    else if (icy) g = soft ? 'icysoft' : 'icy';
+    else if (soft) g = 'slushy';
     else {
       const from = lastWet + 1; // only snow that fell after the last wetting counts as fresh
       const s24 = from <= t ? sum(Math.max(from, t), t) : 0;

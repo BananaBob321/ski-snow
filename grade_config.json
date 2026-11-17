@@ -1,7 +1,7 @@
 {
   "_about": "Cut-offs for grading each ski day. Evidence and sources: claude/snow-quality-research-2026-11-16.md in the Travel program project. Snow amounts are the model's daily snow water scaled per resort so the window average matches calib.csv.",
   "rain_day_mm": 1,
-  "melt_hours": 2,
+  "melt_hours": 3,
   "refreeze_c": -1,
   "icy_days": 2,
   "cover_cm": 10,
@@ -23,16 +23,21 @@
   },
   "_notes": {
     "rain_day_mm": "rain of 1 mm or more in the day wets the surface (and makes that day Slushy)",
-    "melt_hours": "hours above +0.5 C that wet the surface",
+    "melt_hours": "melting (wets the surface): 3+ daytime hours (09:00-17:59) above +1 C AND a day maximum of +2 C or more (melt_max_c). Before 17 Nov: 2+ hours above +0.5 C.",
     "refreeze_c": "overnight low (00:00-08:59) that refreezes a wet surface into a crust",
     "icy_days": "a crust counts as Icy on the morning it forms and the next day; after that grooming has usually broken it up (Packed)",
-    "cover_cm": "new snow that buries a crust",
+    "cover_cm": "new snow that buries a crust; also, a day with this much new snow is not a wetting day and not Slushy because of rain",
     "powder": "15 cm+ in 24 h or 25 cm+ in 48 h with no wetting since, falling at -3 C or colder (snow-weighted); otherwise Good. Wind is not used: the model's 10 m gusts on snowy days are mostly 80-190 km/h in mountain grid cells (median about 100 km/h at Les 3 Vallees mid-mountain), so they cannot tell wind-packed snow from sheltered snow (16 Nov 2026).",
     "good": "5 cm+ in the last 3 days with no wetting since",
-    "slushy_hours": "daytime (09:00-17:59) hours above +1 C that make the snow soft and heavy",
+    "slushy_hours": "Slushy: 3+ daytime hours above +1 C AND a day maximum of +3 C or more (slushy_max_c); or rain of 1 mm+ with under 10 cm of new snow that day.",
     "icysoft": "a refrozen morning that softens by afternoon",
     "default_points": "Owner, 16 Nov 2026: a powder day counts the same as a good snow day, and snow density (light or heavy) matters little as long as snow is regular. So Powder = Good = 80; the -3 C density rule now only labels days, it does not change scores.",
-    "hardpack": "Icy, no new snow 14+ days (key 'hardpack'): a day that would be Packed, but more than 14 days since the last snowfall of 5 cm+. Added 17 Nov 2026: Yabuli (56% of days) and Beidahu (66%) never thaw, so they graded as Packed and Yabuli ranked above Hotham. Nathan, 17 Nov: 'Yabuli was horrible', 'Yabuli was like icy. Felt worse than hard pack'. Scored 0, the same as Icy. Elsewhere it affects 8% of days or fewer."
+    "hardpack": "Icy, no new snow 14+ days (key 'hardpack'): a day that would be Packed, but more than 14 days since the last snowfall of 5 cm+. Added 17 Nov 2026: Yabuli (56% of days) and Beidahu (66%) never thaw, so they graded as Packed and Yabuli ranked above Hotham. Nathan, 17 Nov: 'Yabuli was horrible', 'Yabuli was like icy. Felt worse than hard pack'. Scored 0, the same as Icy. Elsewhere it affects 8% of days or fewer.",
+    "rain_as_snow_max_c": "Model rain on a day whose maximum at this height is +1.5 C or lower counts as snow. The model decides rain or snow at its own grid height; at Hotham it runs about 1 C warm in the afternoons against the Bureau's station (July mean max -0.1 C).",
+    "calibration_17nov": "Rules checked 17 Nov 2026 against Nathan's week at Hotham, 17-24 July 2024 ('almost perfect'; resort reports: 26 cm on 15-16 July, bluebird 18 July, 31 cm in 24 h to 20 July, about 60 cm for the week, cold snow, sunny 24 July). Old rules graded it Slushy/Icy (week 33); new rules: Good, Good, Good, Powder, Powder, Good, Packed, Packed (week 73)."
   },
-  "hardpack_days": 14
+  "hardpack_days": 14,
+  "melt_max_c": 2,
+  "slushy_max_c": 3,
+  "rain_as_snow_max_c": 1.5
 }
