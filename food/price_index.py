@@ -124,10 +124,10 @@ def main():
     with open(HERE / "price_index.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["#", "Resort", "Country", "Standard items", "Meal level (USA = 1)", "Drink level (USA = 1)",
-                    "Resort vs country", "Food per day US$ (index)", "Food per day US$ (menu basket)"])
+                    "Resort vs country (%)", "Food per day US$ (index)", "Food per day US$ (menu basket)"])
         for r in R:
             w.writerow([r, names[r], country[r], n_items[r], round(lv(r, "meal"), 3), round(lv(r, "drink"), 3),
-                        f"{math.exp(b[('r', r)]) - 1:+.0%}", round(M * lv(r, "meal") + D * lv(r, "drink"), 2),
+                        round((math.exp(b[("r", r)]) - 1) * 100), round(M * lv(r, "meal") + D * lv(r, "drink"), 2),
                         round(full[r], 2) if r in full else ""])
     nres = collections.Counter(country[r] for r in R)
     with open(HERE / "country_index.csv", "w", newline="", encoding="utf-8") as fh:
